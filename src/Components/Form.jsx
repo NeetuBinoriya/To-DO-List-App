@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 
 
-const Form = ({ addToDo, id, setId, data, setData }) => {
+const Form = ({ addToDo, id, setId, data, setData, setReload }) => {
     const [title, setTitle] = useState("")
     const [description, setDescription] = useState("")
     // console.log(title);
@@ -39,6 +39,7 @@ const Form = ({ addToDo, id, setId, data, setData }) => {
                 setDescription("")
             }
         }
+        setReload(true)
     };
     return (
         <>
